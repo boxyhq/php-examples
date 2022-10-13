@@ -51,3 +51,9 @@ npm run build
 ```bash
 php artisan serve
 ```
+
+Open [http://localhost:8000/](http://localhost:8000/) to see the app.
+
+### SAML SSO setup
+
+[TODO]
