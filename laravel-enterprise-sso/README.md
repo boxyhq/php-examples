@@ -16,12 +16,6 @@ git clone https://github.com/boxyhq/php-examples.git
 cd php-examples/laravel-enterprise-sso
 ```
 
-### Install dependencies
-
-```bash
-composer install
-```
-
 ### Setup environment
 
 ```bash
@@ -29,6 +23,28 @@ cp .env.example .env
 ```
 
 Update `.env` with your own credentials.
+
+### Install dependencies
+
+```bash
+composer install
+```
+
+### Run the database migration
+
+```bash
+php artisan migrate
+```
+
+### Build the assets
+
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
 
 ### Run the app
 
