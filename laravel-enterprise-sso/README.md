@@ -6,25 +6,32 @@ This demo app shows how to add SAML SSO to a Laravel app using SAML Jackson.
 
 Please follow the below instructions.
 
+### Clone the repo
+
+```bash
+git clone https://github.com/boxyhq/php-examples.git
+```
+
+```bash
+cd php-examples/laravel-enterprise-sso
+```
+
 ### Install dependencies
 
 ```bash
-npm install
+composer install
 ```
 
 ### Setup environment
 
-Update `apps/adonisjs/.env` with your own credentials.
+```bash
+cp .env.example .env
+```
+
+Update `.env` with your own credentials.
 
 ### Run the app
 
 ```bash
-npm run dev:adonisjs
+php artisan serve
 ```
-
-Open the app at [http://localhost:3000](http://localhost:3000)
-
-## Configure SAML SSO
-
--   Open [http://localhost:3000/settings](http://localhost:3000/settings)
--   Add the SAML Metadata for the current tenant
