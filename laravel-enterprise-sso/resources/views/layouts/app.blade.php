@@ -12,33 +12,30 @@
     <header>
       <nav class="border-gray-200 px-4 py-4 shadow">
         <div class="max-w-7xl mx-auto">
-            <ul class="flex gap-4">
-                <li>
-                    <a href="/" class="font-normal text-gray-900">Home</a>
-                </li>
-                <li>
-                    <a href="/settings" class="font-normal text-gray-900">SAML SSO</a>
-                </li>
-                
-                @guest
-                    <li>
-                        <a href="/sso" class="font-normal text-gray-900">Login</a>
-                    </li>
-                @endguest
-
-                @auth
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <a href={{ route('logout') }} class="font-normal text-gray-900" onclick="event.preventDefault(); this.closest('form').submit();">Log Out</a>
-                        </form>
-                    </li>
-                </form>
-            @endauth
-
+          <ul class="flex gap-4">
             <li>
-              <a href="/profile" class="font-normal text-gray-900">Profile</a>
+              <a href="/" class="font-normal text-gray-900">Home</a>
             </li>
+            <li>
+              <a href="/settings" class="font-normal text-gray-900">Setup SAML SSO</a>
+            </li>
+            @guest
+              <li>
+                <a href="/sso" class="font-normal text-gray-900">Login</a>
+              </li>
+            @endguest
+            @auth
+              <li>
+                <a href="/profile" class="font-normal text-gray-900">Profile</a>
+              </li>
+              <li>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <a href={{ route('logout') }} class="font-normal text-gray-900" onclick="event.preventDefault(); this.closest('form').submit();">Log Out</a>
+                </form>
+              </li>
+              </form>
+            @endauth            
           </ul>
         </div>
       </nav>
